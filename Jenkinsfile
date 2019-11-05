@@ -21,7 +21,7 @@ pipeline {
              }  
             }
         }
-        stage('code analysis') { 
+        stage('code Analysis') { 
             steps {
                 withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
                sh 'mvn sonar:sonar \
@@ -29,7 +29,8 @@ pipeline {
           -Dsonar.projectKey=itrainOrg \
           -Dsonar.organization=itrain \
           -Dsonar.host.url=https://sonarcloud.io \
-         -Dsonar.login=2a77f988a8b897cc64a1b30412b9677138fc20ef}  
+         -Dsonar.login=2a77f988a8b897cc64a1b30412b9677138fc20ef
+                }  
             }
         }
         
