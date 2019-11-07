@@ -25,10 +25,10 @@ pipeline {
             steps {
                 withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
                sh 'mvn  sonar:sonar \
-              -Dsonar.projectKey=maven-project-example \
-              -Dsonar.organization=itrain-project \
-              -Dsonar.host.url=https://sonarcloud.io \
-              -Dsonar.login=84ac824349ac2903d832226f0bd2d0db96f04964
+                     -Dsonar.projectKey=maven-project-example \
+                     -Dsonar.organization=itrain-project \
+                     -Dsonar.host.url=https://sonarcloud.io \
+                     -Dsonar.login=84ac824349ac2903d832226f0bd2d0db96f04964'
                 }  
             }
         }
